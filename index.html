@@ -12,6 +12,15 @@
   <link rel="canonical" href="https://jinjihwan.github.io/seminar/" />
   <title>중하위권 인서울 전략 설명회</title>
 
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83DVLXMSF0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-83DVLXMSF0');
+</script>
+
   <style>
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
@@ -446,6 +455,7 @@
     </section>
 
     <!-- 4. 전환 질문 -->
+    <!--
     <section class="section">
       <div class="container">
         <div class="question-box">
@@ -455,6 +465,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- 5. 설명회 내용 -->
     <section class="section section-soft" id="contents">
@@ -491,8 +502,10 @@
       <div class="container">
         <div class="apply-head">
           <span class="kicker">APPLICATION</span>
-          <h2 class="title">포기할지 고민하기 전에,<br>가능한 전략부터 확인하세요.</h2>
+          <h2 class="title">설명회 안내 및 신청</h2>
+          <!--
           <p class="lead">현재 위치를 정확히 알고 움직이는 것이 가장 빠른 시작입니다.</p>
+          -->
         </div>
 
         <div class="apply-wrap">
@@ -691,5 +704,416 @@
       }
     });
   </script>
+  
+  
+  <script>
+(() => {
+  /* ========================================
+     매일공부매니저 설명회 GA4 상세 추적
+     Measurement ID: G-83DVLXMSF0
+     ======================================== */
+
+  function trackEvent(name, params = {}) {
+    if (typeof gtag !== 'function') return;
+
+    gtag('event', name, params);
+  }
+
+  window.trackSeminarEvent = trackEvent;
+
+
+  /* ========================================
+     1. 스크롤 깊이
+     25 / 50 / 75 / 90%
+     ======================================== */
+
+  const scrollMilestones = [25, 50, 75, 90];
+  const reachedScrollMilestones = new Set();
+
+  function checkScrollDepth() {
+    const doc = document.documentElement;
+
+    const scrollTop =
+      window.pageYOffset ||
+      doc.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    const viewportHeight = window.innerHeight;
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      doc.scrollHeight,
+      document.body.offsetHeight,
+      doc.offsetHeight
+    );
+
+    if (!documentHeight) return;
+
+    const scrollPercent =
+      ((scrollTop + viewportHeight) / documentHeight) * 100;
+
+    scrollMilestones.forEach(percent => {
+      if (
+        scrollPercent >= percent &&
+        !reachedScrollMilestones.has(percent)
+      ) {
+        reachedScrollMilestones.add(percent);
+
+        trackEvent('scroll_depth', {
+          scroll_percent: percent
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScrollDepth, {
+    passive: true
+  });
+
+  window.addEventListener('load', checkScrollDepth);
+
+
+  /* ========================================
+     2. 페이지 주요 구간 도달률
+     ======================================== */
+
+  const trackedSections = [
+    { id: 'top',        name: 'hero',       order: 1 },
+    { id: 'free-class', name: 'free_class', order: 2 },
+    { id: 'reviews',    name: 'reviews',    order: 3 },
+    { id: 'contents',   name: 'contents',   order: 4 },
+    { id: 'apply',      name: 'apply',      order: 5 }
+  ];
+
+  const sectionMap = new Map(
+    trackedSections.map(section => [section.id, section])
+  );
+
+  const viewedSections = new Set();
+  const visibleSections = new Set();
+  const sectionStartTimes = new Map();
+
+  function startSectionTimer(id) {
+    if (
+      document.visibilityState !== 'visible' ||
+      sectionStartTimes.has(id)
+    ) {
+      return;
+    }
+
+    sectionStartTimes.set(id, performance.now());
+  }
+
+  function stopSectionTimer(id) {
+    if (!sectionStartTimes.has(id)) return;
+
+    const start = sectionStartTimes.get(id);
+    const elapsedMs = performance.now() - start;
+    const seconds = Math.round(elapsedMs / 100) / 10;
+
+    sectionStartTimes.delete(id);
+
+    if (seconds < 1) return;
+
+    const meta = sectionMap.get(id);
+    if (!meta) return;
+
+    trackEvent('section_engagement', {
+      section_name: meta.name,
+      section_order: meta.order,
+      engagement_seconds: seconds
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+        const meta = sectionMap.get(entry.target.id);
+        if (!meta) return;
+
+        if (entry.intersectionRatio >= 0.35) {
+
+          visibleSections.add(meta.id);
+
+          if (!viewedSections.has(meta.id)) {
+            viewedSections.add(meta.id);
+
+            trackEvent('section_view', {
+              section_name: meta.name,
+              section_order: meta.order
+            });
+          }
+
+          startSectionTimer(meta.id);
+
+        } else {
+
+          visibleSections.delete(meta.id);
+          stopSectionTimer(meta.id);
+
+        }
+      });
+
+    }, {
+      threshold: [0, 0.35, 0.6]
+    });
+
+    trackedSections.forEach(section => {
+      const element = document.getElementById(section.id);
+
+      if (element) {
+        sectionObserver.observe(element);
+      }
+    });
+  }
+
+
+  /* 탭을 다른 곳으로 전환한 시간은 체류시간에서 제외 */
+  document.addEventListener('visibilitychange', () => {
+
+    if (document.visibilityState === 'hidden') {
+
+      Array.from(sectionStartTimes.keys())
+        .forEach(stopSectionTimer);
+
+    } else {
+
+      visibleSections.forEach(startSectionTimer);
+
+    }
+  });
+
+  window.addEventListener('pagehide', () => {
+    Array.from(sectionStartTimes.keys())
+      .forEach(stopSectionTimer);
+  });
+
+
+  /* ========================================
+     3. 무료 5분 영상
+     ======================================== */
+
+  const video = document.getElementById('preview-video');
+
+  if (video) {
+
+    let videoStarted = false;
+    let videoCompleted = false;
+
+    const videoMilestones = [25, 50, 75, 90];
+    const reachedVideoMilestones = new Set();
+
+    video.addEventListener('play', () => {
+
+      if (videoStarted) return;
+
+      videoStarted = true;
+
+      trackEvent('preview_video_start');
+    });
+
+    video.addEventListener('timeupdate', () => {
+
+      if (!video.duration || !Number.isFinite(video.duration)) return;
+
+      const percent =
+        (video.currentTime / video.duration) * 100;
+
+      videoMilestones.forEach(milestone => {
+
+        if (
+          percent >= milestone &&
+          !reachedVideoMilestones.has(milestone)
+        ) {
+
+          reachedVideoMilestones.add(milestone);
+
+          trackEvent('preview_video_progress', {
+            video_percent: milestone
+          });
+        }
+      });
+    });
+
+    video.addEventListener('ended', () => {
+
+      if (videoCompleted) return;
+
+      videoCompleted = true;
+
+      trackEvent('preview_video_complete');
+    });
+  }
+
+
+  /* ========================================
+     4. CTA 클릭 위치
+     ======================================== */
+
+  const ctaTracking = [
+    {
+      selector: '.header-cta',
+      location: 'header_apply'
+    },
+    {
+      selector: '.hero-actions .btn',
+      location: 'hero_free_class'
+    },
+    {
+      selector: '.video-cta .btn',
+      location: 'video_to_reviews'
+    },
+    {
+      selector: '.mobile-cta .btn',
+      location: 'mobile_apply'
+    }
+  ];
+
+  ctaTracking.forEach(item => {
+
+    document.querySelectorAll(item.selector)
+      .forEach(button => {
+
+        button.addEventListener('click', () => {
+
+          trackEvent('cta_click', {
+            cta_location: item.location
+          });
+
+        });
+      });
+  });
+
+
+  /* ========================================
+     5. 신청폼 시작 / 제출 시도
+     ======================================== */
+
+  const form = document.getElementById('application-form');
+
+  if (form) {
+
+    let formStarted = false;
+
+    function markFormStarted() {
+
+      if (formStarted) return;
+
+      formStarted = true;
+
+      trackEvent('form_start', {
+        form_name: 'seminar_application'
+      });
+    }
+
+    form.addEventListener('focusin', markFormStarted);
+    form.addEventListener('change', markFormStarted);
+
+    form.addEventListener('submit', () => {
+
+      trackEvent('form_submit_attempt', {
+        form_name: 'seminar_application'
+      });
+
+    });
+  }
+
+
+  /* ========================================
+     6. Formspree 성공 여부 감지
+     ======================================== */
+
+  const formStatus = document.getElementById('form-status');
+
+  if (formStatus && form) {
+
+    let leadSent = false;
+    let previousState = '';
+
+    const statusObserver = new MutationObserver(() => {
+
+      let currentState = '';
+
+      if (formStatus.classList.contains('success')) {
+        currentState = 'success';
+      }
+
+      if (formStatus.classList.contains('error')) {
+        currentState = 'error';
+      }
+
+      if (currentState === previousState) return;
+
+      previousState = currentState;
+
+      if (currentState === 'success' && !leadSent) {
+
+        leadSent = true;
+
+        trackEvent('generate_lead', {
+          lead_type: 'seminar_application'
+        });
+      }
+
+      if (currentState === 'error') {
+
+        trackEvent('form_submit_error', {
+          form_name: 'seminar_application'
+        });
+      }
+    });
+
+    statusObserver.observe(formStatus, {
+      attributes: true,
+      childList: true,
+      subtree: true
+    });
+  }
+
+
+  /* ========================================
+     7. FAQ 열기
+     ======================================== */
+
+  document.querySelectorAll('.faq details')
+    .forEach((detail, index) => {
+
+      detail.addEventListener('toggle', () => {
+
+        if (!detail.open) return;
+
+        trackEvent('faq_open', {
+          faq_index: index + 1
+        });
+      });
+    });
+
+
+  /* ========================================
+     8. 후기 직접 탐색
+     ======================================== */
+
+  const reviewPrevButton =
+    document.getElementById('review-prev');
+
+  const reviewNextButton =
+    document.getElementById('review-next');
+
+  reviewPrevButton?.addEventListener('click', () => {
+    trackEvent('review_navigation', {
+      direction: 'previous'
+    });
+  });
+
+  reviewNextButton?.addEventListener('click', () => {
+    trackEvent('review_navigation', {
+      direction: 'next'
+    });
+  });
+
+})();
+</script>
+  
 </body>
 </html>
