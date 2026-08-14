@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="학원도 다니고 공부도 하는데 성적이 그대로라면, 문제는 공부량보다 공부의 방향일 수 있습니다. 중하위권 학생이 가장 먼저 바꿔야 할 원리와 인서울 전략을 9월 6일 온라인 설명회에서 확인하세요." />
+  <meta property="og:title" content="상위 10% 인서울 대학, 중하위권은 포기해야 할까요?" />
+  <meta property="og:description" content="학원도 다니는데 왜 성적은 그대로일까요? · 중하위권 학생을 위한 5분 미리보기 · 9월 6일 오후 8시 Zoom 설명회" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jinjihwan.github.io/seminar/" />
+  <meta name="theme-color" content="#173958" />
+  <link rel="canonical" href="https://jinjihwan.github.io/seminar/" />
+  <title>중하위권 인서울 전략 설명회 | 매일공부매니저</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-83DVLXMSF0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-83DVLXMSF0');
+  </script>
+
+  <!-- ============================================================
+       Meta Pixel
+       1) Meta Dataset/Pixel ID: 2129185907695458
+       2) PageView는 페이지 방문 시 자동 전송됩니다.
+       3) Purchase는 Formspree 신청이 정상 접수된 뒤에만 전송됩니다.
+       ============================================================ -->
+  <script>
+    const META_PIXEL_ID = '2129185907695458';
+
+    if (/^\d{8,25}$/.test(META_PIXEL_ID)) {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    } else {
+      console.warn('[Meta Pixel] META_PIXEL_ID를 실제 숫자 픽셀 ID로 교체해야 추적이 시작됩니다.');
+    }
+  </script>
+
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+    :root {
+      --ink:#172033;
+      --ink2:#344054;
+      --muted:#667085;
+      --line:#dfe5ec;
+      --paper:#ffffff;
+      --soft:#f5f7fa;
+      --navy:#132f50;
+      --navy2:#1b416c;
+      --blue:#315f91;
+      --blue2:#254b75;
+      --gold:#d5b970;
+      --gold-soft:#f0e6ce;
+      --max:1020px;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(20,45,75,.07);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--ink);background:var(--paper);
+      font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      word-break:keep-all;-webkit-font-smoothing:antialiased;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+    button{border:0}
+
+    .container{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    .section{padding:88px 0}
+    .section-soft{background:var(--soft)}
+    .kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:15px;color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.02em}
+    .kicker:before{content:"";width:24px;height:2px;border-radius:99px;background:currentColor}
+    .title{margin:0 0 19px;font-size:clamp(33px,4.7vw,50px);line-height:1.18;letter-spacing:-.045em}
+    .lead{max-width:720px;margin:0;color:#596579;font-size:17px;line-height:1.75}
+    .btn{min-height:54px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 24px;border-radius:8px;font-weight:800;cursor:pointer;transition:.18s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{color:#fff;background:var(--navy);box-shadow:0 8px 18px rgba(19,47,80,.16)}
+    .btn-primary:hover{background:#0d2743}
+    .btn-light{color:var(--navy);background:#fff;border:1px solid rgba(255,255,255,.5);box-shadow:0 10px 25px rgba(0,0,0,.12)}
+    .btn-block{width:100%}
+
+    .site-header{position:sticky;top:0;z-index:50;border-bottom:1px solid #e2e7ed;background:rgba(255,255,255,.96);backdrop-filter:blur(10px)}
+    .header-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--navy);font-size:14px;font-weight:800;letter-spacing:-.03em}
+    .brand-mark{width:36px;height:36px;display:grid;place-items:center;border-radius:8px;color:#fff;background:var(--navy);font-size:12px;font-weight:900}
+    .header-cta{min-height:39px;padding:0 14px;font-size:13px;border-radius:7px}
+
+    .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#102b49 0%,#173b63 58%,#102b49 100%)}
+    .hero:before{content:"";position:absolute;inset:0;opacity:.05;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:100% 72px}
+    .hero-inner{position:relative;z-index:1;min-height:570px;display:flex;flex-direction:column;justify-content:center;padding:92px 0 96px}
+    .hero-label{align-self:flex-start;margin-bottom:24px;color:#d7e3ee;font-size:14px;font-weight:700}
+    .hero-label:before{content:"";display:inline-block;width:28px;height:2px;margin-right:10px;vertical-align:middle;background:var(--gold)}
+    .hero h1{max-width:880px;margin:0 0 25px;font-size:clamp(43px,6vw,68px);line-height:1.12;letter-spacing:-.055em}
+    .hero h1 em{color:#f1dfb2;font-style:normal}
+    .hero-copy{max-width:720px;margin:0 0 29px;color:#dbe5ee;font-size:18px;line-height:1.75}
+    .hero-copy strong{color:#fff}
+    .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .hero-event{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 28px;color:#eef4ff;font-size:13px;font-weight:700}
+    .hero-event span{padding:7px 10px;border:1px solid rgba(255,255,255,.17);border-radius:5px;background:rgba(255,255,255,.05)}
+    .hero-event .event-live{color:#fff;border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.12)}
+
+    .video-head{max-width:800px;margin:0 auto 34px;text-align:center}
+    .video-head .kicker{justify-content:center}
+    .video-head .lead{margin:0 auto}
+    .video-shell{max-width:900px;margin:0 auto}
+    .video-frame{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#07111f;box-shadow:0 16px 42px rgba(20,45,75,.12)}
+    .video-frame video{width:100%;height:100%;display:block;border:0;background:#000}
+    .video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;color:#fff;background:linear-gradient(rgba(7,17,31,.55),rgba(7,17,31,.88)),url('profile.webp') center 31%/cover no-repeat}
+    .video-placeholder strong{font-size:clamp(22px,3vw,32px);letter-spacing:-.04em}
+    .video-placeholder span{margin-top:8px;color:#d5dfeb;font-size:14px;line-height:1.5}
+    .speaker-strip{max-width:820px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin:20px auto 0;padding:14px 16px;border:1px solid #dce3eb;border-radius:10px;background:#fff}
+    .speaker-strip img{width:50px;height:50px;border-radius:8px;object-fit:cover}
+    .speaker-copy strong{display:block;margin-bottom:4px;font-size:15px}
+    .speaker-copy span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+    .proof-badge{padding:7px 10px;border:1px solid #d7e2ee;border-radius:5px;color:var(--blue);background:#f5f8fb;font-size:12px;font-weight:800;white-space:nowrap}
+    .video-cta{margin-top:25px;text-align:center}
+    .video-outline{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+    .video-outline span{padding:7px 10px;border:1px solid var(--line);border-radius:5px;color:var(--ink2);background:#f8fafc;font-size:12px;font-weight:800}
+
+    .reviews-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:22px}
+    .reviews-head .title{margin-bottom:0}
+    .reviews-note{max-width:350px;margin:0 0 5px;color:var(--muted);font-size:13px;line-height:1.55;text-align:right}
+    .reviews-carousel{position:relative}
+    .reviews-track{display:flex;gap:15px;overflow-x:auto;padding:2px 3px 14px;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
+    .reviews-track::-webkit-scrollbar{display:none}
+    .review-card{flex:0 0 calc((100% - 15px)/2);margin:0;padding:9px;border:1px solid #dce3ea;border-radius:12px;background:#fff;box-shadow:0 5px 16px rgba(20,45,75,.04);scroll-snap-align:start}
+    .review-card img{width:100%;height:auto;border-radius:7px}
+    .review-label{padding:10px 5px 2px;color:var(--muted);font-size:12px;text-align:center}
+    .reviews-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px}
+    .review-arrow{width:42px;height:42px;display:grid;place-items:center;border:1px solid #d8dee8;border-radius:6px;color:var(--ink2);background:#fff;cursor:pointer;font-size:22px;line-height:1}
+    .review-counter{min-width:70px;color:var(--muted);font-size:12px;font-weight:850;text-align:center;font-variant-numeric:tabular-nums}
+
+    .curriculum{margin-top:39px;border-top:2px solid var(--navy)}
+    .curriculum-row{display:grid;grid-template-columns:105px 1fr;gap:20px;padding:28px 4px;border-bottom:1px solid #dce3ea}
+    .part{color:#59718b;font-size:12px;font-weight:800;letter-spacing:.06em}
+    .curriculum-row h3{margin:0 0 7px;color:#172b42;font-size:21px;line-height:1.35;letter-spacing:-.035em;font-weight:800}
+    .curriculum-row p{margin:0;color:#667085;font-size:15px;line-height:1.68}
+
+    .apply-head{max-width:760px}
+    .apply-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:stretch;margin-top:38px}
+    .apply-summary,.apply-form{border-radius:14px}
+    .apply-summary{padding:31px;color:#fff;background:#173958}
+    .apply-summary h3,.apply-form h3{margin:0 0 22px;font-size:26px;letter-spacing:-.04em}
+    .info-row{display:grid;grid-template-columns:74px 1fr;gap:13px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+    .info-row:first-of-type{border-top:1px solid rgba(255,255,255,.13)}
+    .info-row span{color:#aebccc;font-size:13px;font-weight:800}
+    .info-row strong{font-size:14px;line-height:1.55}
+    .price{margin-top:21px;padding:17px;border-radius:7px;color:#172b42;background:var(--gold-soft)}
+    .price small{display:block;margin-bottom:4px;font-size:12px;font-weight:800}
+    .price strong{font-size:27px;letter-spacing:-.04em}
+    .apply-form{padding:31px;border:1px solid #dce3ea;background:#fff;box-shadow:0 8px 25px rgba(20,45,75,.06)}
+    .form-lead{margin:-13px 0 22px;color:var(--muted);font-size:13px;line-height:1.55}
+    .form-grid{display:grid;gap:13px}
+    .field label{display:block;margin-bottom:7px;color:var(--ink2);font-size:12px;font-weight:850}
+    .field input,.field select{width:100%;height:51px;padding:0 14px;border:1px solid #dce2eb;border-radius:6px;outline:none;background:#fff;color:var(--ink)}
+    .field input:focus,.field select:focus{border-color:#5279a1;box-shadow:0 0 0 3px rgba(49,95,145,.08)}
+    .consent{display:flex;align-items:flex-start;gap:8px;color:var(--muted);font-size:11px;line-height:1.5}
+    .consent input{margin-top:2px}
+    .seat-rule{margin:12px 0 0;padding:12px 13px;border-radius:5px;color:#344054;background:#f6f8fa;font-size:11px;font-weight:750;line-height:1.55;text-align:center}
+    .form-status{display:none;margin-top:14px;padding:14px 16px;border-radius:8px;font-size:14px;font-weight:750;line-height:1.6}
+    .form-status.success{display:block;color:#075d40;border:1px solid #a7e3cd;background:#ecfbf5}
+    .form-status.error{display:block;color:#9f1d1d;border:1px solid #f2b8b8;background:#fff2f2}
+    .apply-form button[disabled]{cursor:not-allowed;opacity:.68;transform:none}
+
+    .policy-box{max-width:790px;margin:34px auto 0;padding:22px 24px;border:1px solid var(--line);border-radius:8px;background:#f7f9fb}
+    .policy-box h3{margin:0 0 13px;font-size:18px;letter-spacing:-.025em}
+    .policy-list{display:grid;gap:9px;margin:0;padding:0;list-style:none;color:var(--ink2);font-size:13px;line-height:1.7}
+    .policy-list li{position:relative;padding-left:17px}
+    .policy-list li:before{content:"•";position:absolute;left:2px;top:0;color:var(--blue);font-weight:900}
+    .policy-contact{margin:14px 0 0;padding-top:13px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.7}
+    .policy-contact a{text-decoration:underline;text-underline-offset:2px}
+
+    .faq{max-width:790px;margin:46px auto 0}
+    .faq h3{margin:0 0 14px;font-size:20px;text-align:center}
+    details{border-bottom:1px solid var(--line)}
+    details:first-of-type{border-top:1px solid var(--line)}
+    summary{position:relative;padding:19px 34px 19px 0;cursor:pointer;list-style:none;font-size:15px;font-weight:850}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";position:absolute;right:5px;top:50%;transform:translateY(-50%);color:var(--blue);font-size:20px}
+    details[open] summary:after{content:"−"}
+    details p{margin:-3px 0 19px;padding-right:35px;color:var(--muted);font-size:13px;line-height:1.7}
+
+    footer{padding:30px 0 88px;border-top:1px solid var(--line);color:#8a95a5;font-size:11px;line-height:1.7}
+    .footer-inner{display:flex;justify-content:space-between;gap:30px}
+    .mobile-cta{display:none}
+
+    @media(max-width:800px){
+      .section{padding:64px 0}.apply-wrap{grid-template-columns:1fr}
+      .reviews-head{align-items:flex-start;flex-direction:column;gap:12px}
+      .reviews-note{max-width:560px;text-align:left}.footer-inner{flex-direction:column}
+    }
+    @media(max-width:640px){
+      .container{width:min(calc(100% - 28px),var(--max))}.section{padding:54px 0}
+      .header-inner{min-height:60px}.brand{font-size:12px}.brand-mark{width:30px;height:30px}.header-cta{min-height:36px;font-size:11px}
+      .hero-inner{min-height:auto;padding:69px 0 73px}.hero-label{margin-bottom:18px;font-size:12px}
+      .hero h1{font-size:clamp(36px,10vw,46px);margin-bottom:19px}.hero-copy{font-size:16px;line-height:1.65;margin-bottom:24px}
+      .hero-actions{align-items:flex-start;flex-direction:column;gap:11px}.hero-actions .btn{width:100%}
+      .hero-event{gap:7px;margin-bottom:20px;font-size:11px}.hero-event span{padding:7px 9px;border-radius:4px}
+      .title{font-size:clamp(29px,8.5vw,39px);margin-bottom:14px}.lead{font-size:15px;line-height:1.68}.kicker{margin-bottom:11px;font-size:11px}
+      .video-head{margin-bottom:23px;text-align:left}.video-head .kicker{justify-content:flex-start}.video-frame{border-radius:9px}
+      .speaker-strip{grid-template-columns:auto 1fr;gap:11px;margin-top:14px;padding:11px 12px;border-radius:8px}.speaker-strip img{width:42px;height:42px;border-radius:7px}
+      .speaker-copy strong{font-size:13px}.speaker-copy span{font-size:11px}.proof-badge{display:none}
+      .video-cta{margin-top:20px}.video-outline{justify-content:flex-start;margin-top:14px}.video-outline span{padding:6px 8px;font-size:10px}
+      .reviews-head{margin-bottom:11px}.reviews-note{display:none}.reviews-track{gap:11px;margin-right:-14px;padding:2px 14px 12px 0}
+      .review-card{flex:0 0 82vw;padding:7px;border-radius:9px}.review-card img{border-radius:6px}.review-label{font-size:10px}
+      .reviews-controls{margin-top:8px;gap:10px}.review-arrow{width:38px;height:38px;font-size:20px}
+      .curriculum{margin-top:27px}.curriculum-row{grid-template-columns:1fr;gap:6px;padding:20px 0}.part{font-size:10px}
+      .curriculum-row h3{font-size:19px;margin-bottom:5px}.curriculum-row p{font-size:13px;line-height:1.62}
+      .apply-wrap{margin-top:28px}.apply-summary,.apply-form{padding:23px;border-radius:10px}.apply-summary h3,.apply-form h3{font-size:23px;margin-bottom:18px}
+      .info-row{grid-template-columns:63px 1fr;padding:11px 0}.info-row span{font-size:11px}.info-row strong{font-size:12px}.price{margin-top:17px;padding:15px}.price strong{font-size:24px}
+      .field input,.field select{height:49px}.faq{margin-top:37px}.faq h3{font-size:18px}summary{padding:17px 31px 17px 0;font-size:13px}details p{font-size:12px}
+      footer{padding-bottom:86px}.mobile-cta{position:fixed;z-index:80;left:12px;right:12px;bottom:12px;display:block}.mobile-cta .btn{min-height:50px;border-radius:8px;box-shadow:0 16px 42px rgba(19,47,80,.24)}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.reviews-track{scroll-behavior:auto}}
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top"><span class="brand-mark">매</span><span>매일공부매니저 · 입시전략 설명회</span></a>
+      <a class="btn btn-primary header-cta" href="#apply">9월 6일 신청</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-label">중하위권 학생 · 학부모 대상 입시전략 설명회</div>
+        <h1>학원도 다니고 공부도 하는데,<br><em>왜 성적은 그대로일까요?</em></h1>
+        <p class="hero-copy">중하위권 학생이 성적을 올리지 못하는 데는 반복해서 나타나는 이유가 있습니다.<br><strong>74명 중 60등에서 시작해 최고 3등까지 올라간 경험</strong>과 실제 지도 사례를 바탕으로, 무엇부터 바꿔야 하는지 설명합니다.</p>
+        <div class="hero-event" aria-label="설명회 일정 요약">
+          <span class="event-live">9월 6일 일요일 오후 8시</span><span>Zoom 온라인 실시간</span><span>다시보기 녹화본 제공</span>
+        </div>
+        <div class="hero-actions"><a class="btn btn-light" href="#free-class">우리 아이가 먼저 바꿔야 할 것 확인하기 ↓</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="free-class">
+      <div class="container">
+        <div class="video-head">
+          <span class="kicker">무료 5분 미리보기</span>
+          <h2 class="title">중하위권 성적이 좀처럼 오르지 않는 이유,<br>대부분 첫 번째 문제부터 잘못 잡고 있습니다.</h2>
+          <p class="lead">학원도 다니고 문제집도 푸는데 성적이 그대로라면, 단순히 더 열심히 하는 것으로는 부족할 수 있습니다. 실제 중하위권 학생들을 지도하며 확인한 가장 먼저 바꿔야 할 공부 원리를 5분 안에 설명합니다.</p>
+          <div class="video-outline" aria-label="미리보기 강의 구성">
+            <span>① 중하위권이 공부해도 성적이 오르지 않는 이유</span><span>② 60등에서 3등까지 올라가며 바꿨던 것</span><span>③ 지금부터 가장 먼저 바꿔야 할 공부 원리 1가지</span>
+          </div>
+        </div>
+        <div class="video-shell">
+          <div class="video-frame" id="video-frame" aria-label="무료 5분 강의 영상">
+            <video id="preview-video" controls playsinline preload="metadata" controlsList="nodownload"><source src="free-class.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없습니다.</video>
+          </div>
+          <div class="speaker-strip">
+            <img src="profile.webp" alt="진지환 강사 프로필 사진">
+            <div class="speaker-copy"><strong>진지환 · 매일공부매니저 대표 강사</strong><span>3월 모의고사 74명 중 60등 → 최고 3등 · 과학고 조기졸업 · 포항공과대학교 재학 · 『초압축 실전 공부법』 저자 · 중하위권 전문 학원 매공매 대표 겸 강사</span></div>
+            <div class="proof-badge">네이버 인물정보 등록</div>
+          </div>
+          <div class="video-cta"><a class="btn btn-primary" href="#reviews">비슷한 학생들의 변화 확인하기 ↓</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="reviews">
+      <div class="container">
+        <div class="reviews-head">
+          <div><span class="kicker">실제 지도 사례</span><h2 class="title">비슷한 고민을 가진 학생들은<br>어떻게 달라졌을까요?</h2></div>
+          <p class="reviews-note">성적 정체, 공부 습관, 자신감 부족으로 고민했던 실제 학생들의 지도 사례입니다. 모든 학생에게 같은 결과를 보장할 수는 없지만, 어떤 변화가 가능했는지 직접 확인해보세요.</p>
+        </div>
+        <div class="reviews-carousel" id="reviews-carousel" role="region" aria-label="실제 지도 후기 슬라이드">
+          <div class="reviews-track" id="reviews-track" tabindex="0">
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018014.webp" alt="수학 점수가 두 달 만에 3등급에서 1등급으로 올랐다는 학부모 후기"><figcaption class="review-label">수학 3등급 → 1등급 · 두 달</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018016.webp" alt="수학 점수가 두 달 만에 5등급에서 2등급으로 올랐다는 학부모 후기"><figcaption class="review-label">수학 5등급 → 2등급 · 두 달</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018010.webp" alt="스스로 공부하기 시작하고 두 달 만에 성적이 올랐다는 학부모 후기"><figcaption class="review-label">스스로 공부 시작 · 두 달 만에 성적 상승</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018015.webp" alt="학원과 과외에도 성적이 오르지 않다가 공부 루틴과 자신감이 생겼다는 학부모 후기"><figcaption class="review-label">학원·과외 이후에도 정체 → 루틴과 자신감 형성</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018007.webp" alt="공부 습관과 성적이 오르기 시작했다는 학부모 후기"><figcaption class="review-label">공부 습관 · 성적 변화</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018008.webp" alt="꾸준한 공부 습관과 점수 상승에 만족한다는 학부모 후기"><figcaption class="review-label">꾸준함 · 점수 상승</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018011.webp" alt="공부 습관과 집안 분위기가 좋아졌다는 학부모 후기"><figcaption class="review-label">공부 습관 · 집안 분위기 변화</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018012.webp" alt="매일 체크와 피드백으로 성적과 자신감을 되찾았다는 후기"><figcaption class="review-label">성적 상승 · 자신감 회복</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018013.webp" alt="학원과 과외를 다녀도 성적이 오르지 않던 학생의 변화 후기"><figcaption class="review-label">학원·과외 이후에도 정체된 학생의 변화</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018017.webp" alt="고등학교 학습량에 적응하고 기대 이상의 성적을 거뒀다는 후기"><figcaption class="review-label">고등학교 적응 · 기대 이상 성적</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018018.webp" alt="매일 공부 상황을 확인할 수 있어 만족한다는 학부모 후기"><figcaption class="review-label">매일 진행 확인 · 부모 부담 감소</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018019.webp" alt="잔소리할 필요가 없어지고 집안 분위기가 좋아졌다는 후기"><figcaption class="review-label">잔소리 감소 · 자기주도</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018020.webp" alt="공부 루틴과 성취감이 생겼다는 학부모 후기"><figcaption class="review-label">루틴 형성 · 성취감</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018021.webp" alt="짧게라도 집중해서 끝내는 습관이 생겼다는 학생 후기"><figcaption class="review-label">집중 습관 · 학습 내용 기억</figcaption></figure>
+            <figure class="review-card"><img loading="lazy" decoding="async" src="1000018022.webp" alt="약한 단원을 파악해 수학 점수가 안정적으로 올랐다는 학생 후기"><figcaption class="review-label">약점 파악 · 수학 점수 안정 상승</figcaption></figure>
+          </div>
+          <div class="reviews-controls" aria-label="후기 슬라이드 조작"><button class="review-arrow" id="review-prev" type="button" aria-label="이전 후기">‹</button><div class="review-counter"><span id="review-current">1</span> / 15</div><button class="review-arrow" id="review-next" type="button" aria-label="다음 후기">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contents">
+      <div class="container">
+        <span class="kicker">설명회 주요 내용</span>
+        <h2 class="title">설명회가 끝나면,<br>무엇부터 해야 할지가 보이도록 구성했습니다.</h2>
+        <p class="lead" style="margin-top:6px">단순한 공부법 강의가 아니라, 현재 성적에서 어떤 전형과 과목에 시간을 써야 하는지 판단할 수 있도록 입시 전략을 하나의 흐름으로 연결합니다.</p>
+        <div class="curriculum">
+          <article class="curriculum-row"><div class="part">PART 01</div><div><h3>인서울 대학의 현실적인 난이도</h3><p>막연히 “인서울이 어렵다”가 아니라, 현재 성적에서 수시·정시·논술 중 어떤 선택지가 현실적인지 판단할 수 있도록 기준을 설명합니다.</p></div></article>
+          <article class="curriculum-row"><div class="part">PART 02</div><div><h3>과목별로 어디까지 올려야 하는지, 무엇부터 해야 하는지</h3><p>모든 과목을 똑같이 끌어올리려 하지 않고, 인서울 합격 가능성을 높이기 위해 필요한 목표 등급과 우선순위를 설명합니다.</p></div></article>
+          <article class="curriculum-row"><div class="part">PART 03</div><div><h3>정시 하나에만 걸지 않는 논술 플랜 B</h3><p>정시 성적이 예상대로 나오지 않았을 때 선택지가 사라지지 않도록, 논술을 준비할 학생과 시작 시점을 구분해 설명합니다.</p></div></article>
+          <article class="curriculum-row"><div class="part">PART 04</div><div><h3>내신이 부족해도 학생부에서 살릴 수 있는 부분</h3><p>단순히 내신 등급만 보는 것이 아니라, 학생부에서 대학이 확인하는 요소와 중하위권 학생이 보완해야 할 부분을 사례 중심으로 설명합니다.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <div class="container">
+        <div class="apply-head"><span class="kicker">설명회 신청 안내</span><h2 class="title">우리 아이의 다음 선택을 정하고 싶다면 신청하세요</h2></div>
+        <div class="apply-wrap">
+          <aside class="apply-summary">
+            <h3>설명회 안내</h3>
+            <p style="margin:-8px 0 18px;color:#d7e3ee;font-size:13px;line-height:1.65">현재 성적에서 무엇을 유지하고, 무엇을 포기하고, 무엇에 집중해야 하는지 판단하기 위한 설명회입니다.</p>
+            <div class="info-row"><span>일정</span><strong>2026년 9월 6일(일) 오후 8시</strong></div>
+            <div class="info-row"><span>진행</span><strong>Zoom 실시간 온라인</strong></div>
+            <div class="info-row"><span>시간</span><strong>약 90분 + 실시간 질의응답</strong></div>
+            <div class="info-row"><span>대상</span><strong>중하위권 중·고등학생 및 학부모</strong></div>
+            <div class="info-row"><span>다시보기</span><strong>신청자 전원에게 제공</strong></div>
+            <div class="info-row"><span>마감</span><strong>9월 5일(토) 오후 11시 59분</strong></div>
+            <div class="info-row"><span>결제</span><strong>신청 후 문자로 계좌 안내 · 입금 완료 시 좌석 확정</strong></div>
+            <div class="info-row"><span>환불</span><strong>설명회 시작 24시간 전까지 전액 환불</strong></div>
+            <div class="price"><small>설명회 참가비</small><strong>39,000원</strong></div>
+          </aside>
+
+          <form class="apply-form" id="application-form" action="https://formspree.io/f/mqpzkljd" method="post">
+            <input type="hidden" name="_subject" value="[인서울 전략 설명회] 신규 신청이 접수되었습니다">
+            <input type="hidden" name="설명회_일정" value="2026년 9월 6일 일요일 오후 8시">
+            <input type="hidden" id="landing-page" name="유입_페이지" value="">
+            <input type="hidden" id="referrer" name="이전_페이지" value="">
+            <input type="hidden" id="utm-source" name="utm_source" value="">
+            <input type="hidden" id="utm-medium" name="utm_medium" value="">
+            <input type="hidden" id="utm-campaign" name="utm_campaign" value="">
+            <input type="hidden" id="utm-content" name="utm_content" value="">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+            <h3>설명회 신청하기</h3>
+            <p class="form-lead">폼 제출 후 입력한 연락처로 <strong>입금 계좌를 문자로 안내</strong>드립니다. 신청 접수가 완료되는 시점을 Meta 광고의 39,000원 구매 전환으로 집계하도록 설정했습니다.</p>
+
+            <div class="form-grid">
+              <div class="field"><label for="name">신청자 이름</label><input id="name" name="신청자_이름" type="text" placeholder="이름을 입력하세요" autocomplete="name" required></div>
+              <div class="field"><label for="phone">연락처</label><input id="phone" name="연락처" type="tel" placeholder="01012345678" inputmode="tel" autocomplete="tel" pattern="[0-9\- ]{10,15}" title="휴대전화 번호를 정확히 입력해주세요" required></div>
+              <div class="field"><label for="role">신청자 구분(학생/학부모/동반)</label><select id="role" name="신청자_구분" required><option value="">선택해주세요</option><option value="학생">학생</option><option value="학부모">학부모</option><option value="학생·학부모 함께 참여">학생·학부모 함께 참여</option></select></div>
+              <div class="field"><label for="grade">학생 학년</label><select id="grade" name="학생_학년" required><option value="">선택해주세요</option><option>중학생</option><option>고1</option><option>고2</option><option>고3</option><option>재수 이상</option></select></div>
+              <div class="field"><label for="concern">현재 가장 고민되는 문제</label><select id="concern" name="현재_가장_큰_고민" required><option value="">선택해주세요</option><option>현재 성적으로 인서울이 가능한지 모르겠다</option><option>수시를 유지할지 정시로 전환할지 모르겠다</option><option>과목별 성적을 어떻게 올려야 할지 모르겠다</option><option>논술을 준비해야 할지 모르겠다</option><option>공부 습관과 실행력이 부족하다</option><option>기타</option></select></div>
+              <label class="consent"><input type="checkbox" name="개인정보_수집_동의" value="동의함" required><span>설명회 신청 및 안내를 위한 개인정보 수집·이용에 동의합니다.</span></label>
+              <label class="consent"><input type="checkbox" name="결제_환불정책_확인" value="확인함" required><span>결제 및 환불 정책(설명회 시작 24시간 전까지 전액 환불, 이후 취소는 환불 불가)을 확인했습니다.</span></label>
+              <button class="btn btn-primary btn-block" id="submit-button" type="submit">9월 6일 설명회 신청하기 →</button>
+            </div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            <p class="seat-rule">신청 접수 → 문자로 계좌 안내 → 39,000원 입금 확인 → 신청 확정 및 Zoom 안내</p>
+          </form>
+        </div>
+
+        <section class="policy-box" id="refund-policy" aria-labelledby="refund-policy-title">
+          <h3 id="refund-policy-title">결제 · 환불 안내</h3>
+          <ul class="policy-list">
+            <li>신청 폼 제출 후 입력한 연락처로 입금 계좌를 문자로 안내합니다. 참가비 39,000원 입금이 확인되면 결제가 완료되고 좌석이 확정됩니다.</li>
+            <li><strong>설명회 시작 24시간 전까지 취소 요청 시 전액 환불</strong>합니다. 설명회 시작 24시간 이내 취소 요청은 환불되지 않습니다.</li>
+            <li>주최 측 사정으로 설명회가 취소되는 경우 참가비를 전액 환불합니다.</li>
+            <li>개인 기기·네트워크 등 접속 이슈로 실시간 참여하지 못한 경우에는 신청자에게 제공되는 다시보기로 대체합니다.</li>
+          </ul>
+          <p class="policy-contact">환불 및 운영 문의: <a href="sms:01071133688">010-7113-3688 (문자)</a> · <a href="mailto:maegongmae@gmail.com">maegongmae@gmail.com</a> · <a href="mailto:bill050225@gmail.com">bill050225@gmail.com</a></p>
+        </section>
+
+        <div class="faq">
+          <h3>신청 전 자주 묻는 질문</h3>
+          <details><summary>학생과 학부모 중 누가 참여하는 것이 좋나요?</summary><p>가능하면 함께 참여하는 것이 좋습니다. 한 명만 참여한다면 현재 입시 결정을 주도하는 분이 참여하는 것을 권합니다.</p></details>
+          <details><summary>성적이 많이 낮아도 도움이 되나요?</summary><p>네. 오히려 현재 성적이 애매하거나 낮아서 무엇부터 해야 할지 모르는 학생을 전제로 구성합니다. 모든 학생에게 인서울이 가능하다고 말하기보다, 현재 위치에서 가능한 선택지와 우선순위를 판단하도록 돕습니다.</p></details>
+          <details><summary>다시보기가 제공되나요?</summary><p>네. 신청자 전원에게 설명회 종료 후 3일간 다시보기를 제공합니다. 실시간 참석이 어렵더라도 신청할 수 있습니다.</p></details>
+          <details><summary>왜 선착순 30명인가요?</summary><p>Zoom의 기술적 정원이 아니라 실시간 질의응답의 품질을 위한 제한입니다. 참석자의 질문을 충분히 다루기 위해 30명까지만 신청받습니다.</p></details>
+          <details><summary>신청은 언제 마감되나요?</summary><p>2026년 9월 5일 토요일 오후 11시 59분에 마감합니다. 정원 30명이 먼저 채워지면 조기에 마감될 수 있습니다.</p></details>
+          <details><summary>폼만 제출하면 좌석이 확정되나요?</summary><p>아닙니다. 폼 제출 후 입력한 연락처로 입금 계좌를 문자로 안내합니다. 참가비 39,000원 입금이 확인된 순서대로 좌석이 최종 확정됩니다.</p></details>
+          <details><summary>환불은 어떻게 받을 수 있나요?</summary><p>설명회 시작 24시간 전까지 취소 요청 시 전액 환불합니다. 시작 24시간 이내 취소는 환불되지 않습니다. 환불 요청은 010-7113-3688(문자), maegongmae@gmail.com 또는 bill050225@gmail.com으로 연락해주세요.</p></details>
+          <details><summary>접속 문제로 실시간 설명회를 못 들으면 어떻게 되나요?</summary><p>개인 기기나 네트워크 등 접속 이슈로 실시간 참여하지 못한 경우, 신청자 전원에게 제공되는 3일간의 다시보기로 대체합니다.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong style="color:#475467">매일공부매니저</strong><br>대표: 진지환 · 주소: 포항공과대학교 기숙사 8동<br>문의: 010-7113-3688 (문자) · maegongmae@gmail.com · bill050225@gmail.com</div>
+      <div>© 2026. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta"><a class="btn btn-primary btn-block" href="#apply">9월 6일 설명회 신청하기 →</a></div>
+
+  <script>
+    // 무료 강의 영상 오류 안내
+    const previewVideo = document.getElementById('preview-video');
+    if (previewVideo) {
+      previewVideo.addEventListener('error', () => {
+        const frame = document.getElementById('video-frame');
+        frame.innerHTML = '<div class="video-placeholder"><strong>영상을 불러오지 못했습니다.</strong><span>잠시 후 새로고침해주세요. 문제가 계속되면 페이지 하단 문의처로 연락해주세요.</span></div>';
+      });
+    }
+
+    // 후기 자동 슬라이드
+    const reviewTrack = document.getElementById('reviews-track');
+    const reviewCards = reviewTrack ? Array.from(reviewTrack.querySelectorAll('.review-card')) : [];
+    const reviewPrev = document.getElementById('review-prev');
+    const reviewNext = document.getElementById('review-next');
+    const reviewCurrent = document.getElementById('review-current');
+    const reviewCarousel = document.getElementById('reviews-carousel');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let reviewIndex = 0, reviewTimer = null, reviewInView = false, resumeTimer = null;
+
+    function updateReviewCounter(){ if(reviewCurrent) reviewCurrent.textContent = String(reviewIndex + 1); }
+    function goToReview(index, smooth = true){
+      if(!reviewTrack || !reviewCards.length) return;
+      reviewIndex = (index + reviewCards.length) % reviewCards.length;
+      const card = reviewCards[reviewIndex];
+      reviewTrack.scrollTo({left: card.offsetLeft - reviewTrack.offsetLeft, behavior: smooth && !reduceMotion ? 'smooth' : 'auto'});
+      updateReviewCounter();
+    }
+    function stopReviewAuto(){ if(reviewTimer) clearInterval(reviewTimer); reviewTimer = null; }
+    function startReviewAuto(){ stopReviewAuto(); if(reduceMotion || !reviewInView) return; reviewTimer = setInterval(() => goToReview(reviewIndex + 1), 4500); }
+    function pauseThenResume(){ stopReviewAuto(); if(resumeTimer) clearTimeout(resumeTimer); resumeTimer = setTimeout(startReviewAuto, 7000); }
+    reviewPrev?.addEventListener('click', () => { goToReview(reviewIndex - 1); pauseThenResume(); });
+    reviewNext?.addEventListener('click', () => { goToReview(reviewIndex + 1); pauseThenResume(); });
+    reviewTrack?.addEventListener('pointerdown', pauseThenResume, {passive:true});
+    reviewTrack?.addEventListener('touchstart', pauseThenResume, {passive:true});
+    reviewCarousel?.addEventListener('mouseenter', stopReviewAuto);
+    reviewCarousel?.addEventListener('mouseleave', startReviewAuto);
+    reviewCarousel?.addEventListener('focusin', stopReviewAuto);
+    reviewCarousel?.addEventListener('focusout', startReviewAuto);
+    if(reviewCarousel && 'IntersectionObserver' in window){
+      const reviewObserver = new IntersectionObserver(entries => {reviewInView = entries[0]?.isIntersecting ?? false; reviewInView ? startReviewAuto() : stopReviewAuto();},{threshold:.35});
+      reviewObserver.observe(reviewCarousel);
+    } else {reviewInView = true; startReviewAuto();}
+
+    // UTM / 유입 정보
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('landing-page').value = window.location.href;
+    document.getElementById('referrer').value = document.referrer || '직접 유입';
+    document.getElementById('utm-source').value = params.get('utm_source') || '';
+    document.getElementById('utm-medium').value = params.get('utm_medium') || '';
+    document.getElementById('utm-campaign').value = params.get('utm_campaign') || '';
+    document.getElementById('utm-content').value = params.get('utm_content') || '';
+
+    // Formspree 정상 제출 성공 시에만 Purchase 전송
+    const form = document.getElementById('application-form');
+    const submitButton = document.getElementById('submit-button');
+    const formStatus = document.getElementById('form-status');
+    let purchaseSent = false;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = '신청 정보를 보내는 중입니다…';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {'Accept':'application/json'}
+        });
+        if (!response.ok) throw new Error('Form submission failed');
+
+        // Meta Purchase: 신청 접수가 성공한 경우에만 1회 전송
+        if (!purchaseSent && typeof window.fbq === 'function') {
+          window.fbq('track', 'Purchase', {
+            value: 39000,
+            currency: 'KRW'
+          });
+          purchaseSent = true;
+        }
+
+        form.reset();
+        formStatus.className = 'form-status success';
+        formStatus.innerHTML = '<strong>신청이 정상적으로 접수되었습니다.</strong><br>입력하신 연락처로 입금 계좌를 문자로 안내드립니다. 39,000원 입금이 확인되면 좌석이 확정되고 Zoom 접속 안내를 보내드립니다.';
+        submitButton.textContent = '신청 접수 완료';
+      } catch (error) {
+        formStatus.className = 'form-status error';
+        formStatus.innerHTML = '<strong>신청 정보를 보내지 못했습니다.</strong><br>잠시 후 다시 시도하거나 010-7113-3688(문자) 또는 페이지 하단 이메일로 문의해주세요.';
+        submitButton.disabled = false;
+        submitButton.textContent = '9월 6일 설명회 신청하기 →';
+      }
+    });
+  </script>
+
+  <script>
+  (() => {
+    // GA4 상세 추적
+    function trackEvent(name, params = {}) { if (typeof gtag !== 'function') return; gtag('event', name, params); }
+
+    const scrollMilestones = [25,50,75,90];
+    const reached = new Set();
+    function checkScrollDepth(){
+      const doc = document.documentElement;
+      const scrollTop = window.pageYOffset || doc.scrollTop || document.body.scrollTop || 0;
+      const viewportHeight = window.innerHeight;
+      const documentHeight = Math.max(document.body.scrollHeight,doc.scrollHeight,document.body.offsetHeight,doc.offsetHeight);
+      if(!documentHeight) return;
+      const percent = ((scrollTop + viewportHeight) / documentHeight) * 100;
+      scrollMilestones.forEach(p => { if(percent >= p && !reached.has(p)){ reached.add(p); trackEvent('scroll_depth',{scroll_percent:p}); }});
+    }
+    window.addEventListener('scroll', checkScrollDepth,{passive:true});
+    window.addEventListener('load', checkScrollDepth);
+
+    const video = document.getElementById('preview-video');
+    if(video){
+      let started=false, completed=false; const milestones=[25,50,75,90], hit=new Set();
+      video.addEventListener('play',()=>{if(started)return;started=true;trackEvent('preview_video_start');});
+      video.addEventListener('timeupdate',()=>{if(!video.duration||!Number.isFinite(video.duration))return;const p=(video.currentTime/video.duration)*100;milestones.forEach(m=>{if(p>=m&&!hit.has(m)){hit.add(m);trackEvent('preview_video_progress',{video_percent:m});}});});
+      video.addEventListener('ended',()=>{if(completed)return;completed=true;trackEvent('preview_video_complete');});
+    }
+
+    document.querySelectorAll('.faq details').forEach((detail,index)=>detail.addEventListener('toggle',()=>{if(detail.open)trackEvent('faq_open',{faq_index:index+1});}));
+    reviewPrev?.addEventListener('click',()=>trackEvent('review_navigation',{direction:'previous'}));
+    reviewNext?.addEventListener('click',()=>trackEvent('review_navigation',{direction:'next'}));
+
+    let formStarted=false;
+    function markFormStarted(){if(formStarted)return;formStarted=true;trackEvent('form_start',{form_name:'seminar_application'});}
+    form.addEventListener('focusin',markFormStarted);
+    form.addEventListener('change',markFormStarted);
+    form.addEventListener('submit',()=>trackEvent('form_submit_attempt',{form_name:'seminar_application'}));
+
+    let previousState='';
+    const statusObserver = new MutationObserver(() => {
+      let currentState='';
+      if(formStatus.classList.contains('success')) currentState='success';
+      if(formStatus.classList.contains('error')) currentState='error';
+      if(currentState===previousState)return;
+      previousState=currentState;
+      if(currentState==='success') trackEvent('generate_lead',{lead_type:'seminar_application'});
+      if(currentState==='error') trackEvent('form_submit_error',{form_name:'seminar_application'});
+    });
+    statusObserver.observe(formStatus,{attributes:true,childList:true,subtree:true});
+  })();
+  </script>
+</body>
+</html>
